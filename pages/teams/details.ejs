@@ -1,0 +1,32 @@
+<%- include('../includes/head.ejs') %>
+    </head>
+
+    <body>
+        <%- include('../includes/navigation.ejs') %>
+        <div class="container mt-10">
+          <h2><%= action %> Team</h2>
+          <hr>
+          <form action="/add-team" method="POST">
+            <div class="form-row col-auto align-self-center">
+              <label for="inputName">Name</label>
+              <input type="text" name="name" class="form-control" id="inputName" aria-describedby="emailHelp">
+            </div>
+            <div class="form-row col-auto align-self-center">
+              <label for="inputImageUrl">Image Url</label>
+              <input type="text" name="imageUrl" class="form-control" id="inputImageUrl">
+            </div>
+            <div class="form-row col-auto align-self-center">
+              <label for="inputCountry">Country</label>
+              <input type="text" name="country" class="form-control" id="inputCountry">
+            </div>
+            <div class="form-row col-auto align-self-center">
+              <label for="textAreaDescription">Description</label>
+              <textarea type="text" name="description" class="form-control" id="textAreaDescription"></textarea>
+            </div>
+            <br>
+            <div class="form-row col-auto align-self-left">
+              <button type="submit" class="btn btn-dark"><%= action %></button>
+            </div>
+          </form>
+        </div>
+      <%- include('../includes/end.ejs') %>
